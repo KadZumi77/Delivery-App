@@ -54,7 +54,7 @@
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="128dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/yeonsung"
         android:text="Sign Up With"
         android:textColor="@color/black"
@@ -106,7 +106,7 @@
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/yeonsung"
         android:text="Or"
         android:textColor="@color/black"
@@ -116,7 +116,7 @@
         app:layout_constraintTop_toBottomOf="@+id/sign_in_password" />
 
     <EditText
-        android:id="@+id/sign_in_password"
+        android:id="@+id/sign_up_user_name"
         android:layout_width="330dp"
         android:layout_height="60dp"
         android:layout_marginTop="12dp"
@@ -135,7 +135,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <EditText
-        android:id="@+id/sign_up_user_name"
+        android:id="@+id/sign_in_password"
         android:layout_width="330dp"
         android:layout_height="60dp"
         android:layout_marginTop="180dp"
