@@ -1,5 +1,6 @@
 package com.example.fooddelivery
 
+import android.Manifest
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -8,6 +9,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -30,6 +34,7 @@ class HomeFragment : Fragment() {
     private lateinit var homeRv: RecyclerView
     private lateinit var goMenuText: TextView
     private lateinit var sharedModel: SharedModel
+    private lateinit var plauncher: ActivityResultLauncher<String>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -87,6 +92,21 @@ class HomeFragment : Fragment() {
             }
 
         })
+        checkPermission()
+    }
+
+    private fun permissionListener(){
+        plauncher = registerForActivityResult(
+            ActivityResultContracts.RequestPermission()){
+            Toast.makeText(activity, "Permission in $it", Toast.LENGTH_LONG).show()
+        }
+    }
+
+    private fun checkPermission(){
+        if(!isPermissionGranted(Manifest.permission.ACCESS_FINE_LOCATION)){
+            permissionListener()
+            plauncher.launch(Manifest.permission.ACCESS_FINE_LOCATION)
+        }
     }
 
     private fun setTransformer() {

@@ -3,6 +3,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="startGreenColor">#53E888</color>
+    <color name="deleteButton">#EB1E5A</color>
     <color name="endGreenColor">#0FA164</color>
     <color name="recyclerViewColor">#F4F4F4</color>
 </resources>

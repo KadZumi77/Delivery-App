@@ -1,6 +1,5 @@
 package com.example.fooddelivery
 
-import User
 import android.content.ContentValues.TAG
 import android.content.Intent
 import android.os.Bundle
@@ -14,6 +13,7 @@ import com.example.fooddelivery.databinding.ActivitySignUpUserBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ktx.database
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
@@ -57,7 +57,7 @@ class SignUpUserActivity : AppCompatActivity() {
                 if (it.isSuccessful) {
                     Toast.makeText(this, "Регистрация успешна!", Toast.LENGTH_SHORT).show()
                     // Перейти на другой экран или выполнить другие действия
-                    val intent = Intent(this@SignUpUserActivity, LocationActivity::class.java)
+                    val intent = Intent(this@SignUpUserActivity, MainActivity::class.java)
                     startActivity(intent)
                     finish()
                     Log.d("MyLog", "Sign up successful")

@@ -6,11 +6,6 @@
     app:startDestination="@id/home">
 
     <fragment
-        android:id="@+id/history"
-        android:name="com.example.fooddelivery.HistoryFragment"
-        android:label="fragment_history"
-        tools:layout="@layout/fragment_history" />
-    <fragment
         android:id="@+id/cart"
         android:name="com.example.fooddelivery.CartFragment"
         android:label="fragment_cart"

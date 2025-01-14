@@ -47,7 +47,7 @@ class LoginUserActivity : AppCompatActivity() {
                 if (it.isSuccessful) {
                     Toast.makeText(this, "Вы успешно вошли!", Toast.LENGTH_SHORT).show()
                     // Перейти на другой экран или выполнить другие действия
-                    val intent = Intent(this@LoginUserActivity, LocationActivity::class.java)
+                    val intent = Intent(this@LoginUserActivity, MainActivity::class.java)
                     startActivity(intent)
                     finish()
                     Log.d("MyLog", "Sign in successful")
